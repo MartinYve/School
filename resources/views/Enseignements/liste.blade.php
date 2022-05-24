@@ -41,51 +41,6 @@
                                                     <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
-                                                <div class="modal-body">
-                                                    <form  method="post" action="{{route('periodes.store') }}" enctype="multipart/form-data">
-                                                        @csrf
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="fname">Heure Début:</label>
-                                                                <input placeholder="Heure de départ" type="text" class="form-control form-control-solid @error('heure_dep') is-invalid @enderror" 
-                                                                name="heure_dep" id="name"  required />
-                                                                @error('heure_dep')
-                                                                    <span class="form-text text-muted" role="alert"><strong class="text-danger">{{ $message }}</strong></span>
-                                                                @enderror
-                                                            </div>
-                                                            <div class="form-group col-md-6">
-                                                                <label for="fname">Heure Fin:</label>
-                                                                <input placeholder="Heure de la Fin" type="text" class="form-control form-control-solid @error('heure_fin') is-invalid @enderror" 
-                                                                name="heure_fin" id="name"  required />
-                                                                @error('heure_fin')
-                                                                    <span class="form-text text-muted" role="alert"><strong class="text-danger">{{ $message }}</strong></span>
-                                                                @enderror
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="form-group col-md-6">
-                                                                <label>Enseignement:</label>
-                                                                <select class="form-control select2"  name="enseignement" id="selectuserrole" required>
-                                                                    @foreach($enseignement_per as $id => $enseignement)
-                                                                        <option value="{{ $enseignement->id }}">{{ $enseignement->name }}</option>
-                                                                    @endforeach
-                                                                </select>
-                                                            </div>   
-                                                            <div class="form-group col-md-6">
-                                                                <label>Jour:</label>
-                                                                <select class="form-control select2"  name="jour" id="selectuserrole" required>
-                                                                    @foreach($jours as $id => $jour)
-                                                                        <option value="{{ $jour->id }}">{{ $jour->jour }}</option>
-                                                                    @endforeach
-                                                                </select>
-                                                            </div> 
-                                                        </div>        
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                            <button type="submit" class="btn btn-primary" >Enregistrer</button>
-                                                        </div>   
-                                                    </form>     
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -112,7 +67,6 @@
                                     <th>@lang('Name')</th>
                                     <th>@lang('Credit')</th>
                                     <th>@lang('Option')</th>
-                                    <th>@lang('Periode')</th>
                                     <th>@lang('Action')</th>
                                  </tr>
                              </thead>
@@ -134,13 +88,6 @@
                                     <td>{{ $enseignement->name }}</td>
                                     <td>{{ $enseignement->credit }}</td>
                                     <td>{{ $comment->name }}</td>
-                                    <td>
-                                        @foreach ($enseignement->periodes as $key => $value)
-                                            @foreach ($value->jours as $key2 => $aff)
-                                                {{$aff->jour}} {{$value->heure_dep}} / {{$value->heure_fin}}
-                                            @endforeach
-                                        @endforeach
-                                    </td>
                                     <td>
                                         <a href="{{ route('Enseignements.edit', $enseignement->id )}}"
                                             class="btn btn-sm btn-primary btn-icon mr-2" title="@lang('Edit details')">

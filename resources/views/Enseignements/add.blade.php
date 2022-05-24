@@ -64,9 +64,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <input type="submit" value="Enregistrer" class="btn btn-primary mb-5">
-                                        <a href = "" style="float: right;"><button class = "btn btn-primary ml-1" title="Ajouter" id="plus"><i class="fa fa-plus"></i></button></a>
-                                        <a href = "" style="float: right;"><button class = "btn btn-primary mb-5" title="Ajouter" id="minus"><i class="fa fa-minus"></i></button></a>
+                                        <input type="submit" value="Enregistrer" style="background-color: #29ca8e; color:white;" class="btn btn mb-5">
+                                        <a href = "" style="float: right;"><button style="background-color: #29ca8e; color:white;" class = "btn btn ml-1" title="Ajouter" id="plus"><i class="fa fa-plus"></i></button></a>
+                                        <a href = "" style="float: right;"><button style="background-color: #29ca8e; color:white;" class = "btn btn mb-5" title="Ajouter" id="minus"><i class="fa fa-minus"></i></button></a>
                                     </div>
                                 </div>
                             </div>

@@ -17,6 +17,7 @@ class CreateEnseignementsTable extends Migration
             $table->id();
             $table->foreignId('option_id')->constrained();
             $table->foreignId('enseignant_id')->constrained();
+            $table->integer('credit');
             $table->string('name');
             $table->timestamps();
         });

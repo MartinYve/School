@@ -22,10 +22,9 @@ class EnseignementController extends Controller
     public function index()
     {
         $options = Option::all() ;
-        $enseignement_id = [] ;
         $enseignements = Enseignement::all();
         $enseignementss = Enseignement::all()->toArray();
-        return view('Enseignements.liste', compact('options','enseignements', 'enseignementss' , 'jours' , 'enseignement_per'));
+        return view('Enseignements.liste', compact('options','enseignements', 'enseignementss'));
     }
 
     /**
@@ -81,11 +80,7 @@ class EnseignementController extends Controller
                             'name' => $name,
                             'credit' => $credit
                         ]);
-                        $enseignantt = DB::table('enseignants')->select('name' , 'email')->where('id' , $enseignement)->first();
-                        $opt = DB::table('options')->select('name')->where('id' , $id)->first();
-                        $ensei = $enseignantt->name ;
-                        $option = $opt->name ;
-                        Mail::to($enseignantt->email)->send(new enseignantCreate($name , $ensei , $option));
+                        
                        }
                 }
                }
