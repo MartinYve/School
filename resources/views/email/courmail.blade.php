@@ -7,7 +7,7 @@
 					<tbody >
 						<tr>
 							<td align="center" valign="top">
-								<table  style="border:3px solid #3d8afd;" border="0" cellpadding="0" cellspacing="0" width="100%" class="tableCard" style="background-color:#fff;border-color:#e5e5e5;border-style:solid;border-width:0 1px 1px 1px;">
+								<table  style="border:3px solid #29ca8e;" border="0" cellpadding="0" cellspacing="0" width="100%" class="tableCard" style="background-color:#fff;border-color:#e5e5e5;border-style:solid;border-width:0 1px 1px 1px;">
 									<tbody>
 										
 										<tr>
@@ -33,7 +33,7 @@
 																<table border="0" cellpadding="0" cellspacing="0" align="center">
 																	<tbody>
 																		<tr>
-																			<td style="background-color: #3d8afd; padding: 12px 35px;" align="center" class="ctaButton"> <a href="{{ route('cours.edit', $id) }}" style="color:#fff;font-family:Poppins,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;font-style:normal;letter-spacing:1px;line-height:20px;text-transform:uppercase;text-decoration:none;display:block" class="text">Voir le cour</a>
+																			<td style="background-color: #3d8afd; padding: 12px 35px;" align="center" class="ctaButton"> <a href="{{ route('cours.edit', $id) }}" style="color:#fff;font-family:Poppins,Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;font-style:normal;letter-spacing:1px;line-height:20px;text-transform:uppercase;text-decoration:none;display:block" style="background-color: #29ca8e; color:white;" class="text">Voir le cour</a>
 																			</td>
 																		</tr>
 																	</tbody>

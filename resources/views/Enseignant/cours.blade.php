@@ -18,7 +18,7 @@
                                     <h4 class="card-title">Créer un cours </h4>
                                 </div>
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                <button type="button" class="btn btn" style="background-color: #29ca8e; color:white;" data-toggle="modal" data-target="#exampleModal">
                                 Mes matières
                                 </button>
 
@@ -84,7 +84,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <input type="submit" style="margin-left:400px; margin-top:20px;" value="publier" class="btn btn-primary mb-5">
+                                        <button type="submit" class="btn btn" style="margin-left:400px; margin-top:20px; background-color: #29ca8e;color:white;">Publier</button>
                                     </div>
                                 </div>
                             </div>
