@@ -79,7 +79,7 @@ class coursController extends Controller
        }
 
        toast('le cours '.$cour->cour.' à bien été publié','success');
-       return view('welcome');
+       return view('home');
     }
 
     /**
