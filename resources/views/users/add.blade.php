@@ -41,10 +41,8 @@
                            </div>
                            <div class="form-group">
                               <label>User Role:</label>
-                              <select class="form-control select2"  name="roles[]" id="selectuserrole" required>
-                              
-                                 <option value="Etudiant" >{{ 'Etudiant' }}</option>
-                                 <option value="Delegue" >{{ 'Delegue' }}</option>
+                              <select class="form-control select2"  name="roles[]" id="selectuserrole" required>                             
+                                 <option value="eleve" >{{ 'eleve' }}</option>
                               </select>
                            </div>
                      </div>
@@ -125,7 +123,7 @@
                                     <label for="rpass">Repeat Password:</label>
                                     <input type="password" class="form-control form-control-solid" name="password_confirmation" id="password_confirmation">
                                     <br>
-                                    <button type="submit" class="btn btn-primary">create</button>
+                                    <button type="submit" class="btn btn" style="background-color: #29ca8e; color:white;">create</button>
                               </div>
                               
                            </form>

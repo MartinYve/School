@@ -72,7 +72,7 @@
                                     </td>
                                     <td>
                                         <a href="{{ route('users.edit', ['user' => $user->id]) }}"
-                                            class="btn btn-sm btn-primary btn-icon mr-2" title="@lang('Edit details')">
+                                            class="btn btn-sm btn btn-icon mr-2" style="background-color: #29ca8e; color:white;" title="@lang('Edit details')">
                                             <i class="ri-pencil-line"></i>
                                         </a>
                                         <form method="POST" style="display: inline-block"
