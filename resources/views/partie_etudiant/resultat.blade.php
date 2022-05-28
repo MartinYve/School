@@ -92,26 +92,24 @@
                                 {{$question->choix2}}</li>
                             <li> <span class="badge badge-info">C </span>
                                 {{$question->choix3}}</li>
-                            @if($question->choix4 !== null)
                             <li> <span class="badge badge-info">D </span>
-                                {{$question->choix3}}</li>
-                            @endif
+                                {{$question->choix4}}</li>
                         </ul>
                     </td>
                 </tr>
                 <tr class="table-info">
                     <th scope="row" width="20%"> Ta réponse :</th>
                     <td width="80%">
-                        @if($question->reponse1 === $reponse)
+                        @if($question->choix1 === $reponse)
                         <span class="badge badge-danger">A</span>
                         @endif
-                        @if($question->reponse2 === $reponse)
+                        @if($question->choix2 === $reponse)
                         <span class="badge badge-danger">B</span>
                         @endif
-                        @if($question->reponse3 === $reponse)
+                        @if($question->choix3 === $reponse)
                         <span class="badge badge-danger">C</span>
                         @endif
-                        @if($question->reponse4 === $reponse)
+                        @if($question->choix4 === $reponse)
                         <span class="badge badge-danger">D</span>
                         @endif
                     </td>

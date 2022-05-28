@@ -133,12 +133,9 @@
 
 @endforeach
 @endif
-<button type="submit" class="btn btn-secondary">Voir Resultat</button> 
+<button type="submit" class="btn btn-secondary">Voir les Resultats</button> <br>
 </form>
-<div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
-    <div id="surveyElement" style="display:inline-block;width:100%;"></div>
-    <div id="surveyResult"></div>
-</div>
+
 @section('script')
 <script>
     function CountDown(duration, display) {

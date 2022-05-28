@@ -225,19 +225,19 @@ class QcmController extends Controller
         }
 
         if ($request->has('reponse1_'.$question->id)) {
-            $reponse = "vrai" ;
+            $reponse = $question->choix1 ;
        
         }elseif ($request->has('reponse2_'.$question->id)) {
-            $reponse = "vrai" ;
+            $reponse = $question->choix2 ;
       
         }elseif ($request->has('reponse3_'.$question->id)) {
-            $reponse = "vrai" ;
+            $reponse = $question->choix3 ;
            
         }elseif ($request->has('reponse4_'.$question->id)) {
-            $reponse = "vrai" ;
+            $reponse = $question->choix4 ;
           
         }else {
-            $reponse = "faux" ;
+            $reponse = "Aucune";
         }
 
         return view('partie_etudiant.resultat', compact('note','etudiant','qcm','questions','reponse'));

@@ -95,17 +95,7 @@
             @endif
     </div>
 </div>
-<div class="pd-20 bg-white border-radius-4 box-shadow mb-30" style="text-align: center">
-    <div class="dropzone">
-        <div class="fallback">
-            <span>
-                <a href="/resultat_matiere/{{ $matiere->id }}">
-                    <i class="icon-copy fa fa-external-link" aria-hidden="true"></i> Voir Resultat
-                </a>
-            </span>
-        </div>
-    </div>
-</div>
+
 
 <br><br>
 <a onclick="javascript:history.go(-1)" class="btn btn-warning"><i class="icon-copy fa fa-mail-reply"
