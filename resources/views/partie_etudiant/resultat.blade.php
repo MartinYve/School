@@ -79,8 +79,8 @@
                 </tr>
               
                 <tr class="table-warning">
-                    <th scope="row">Note</th>
-                    <td><span class="badge badge-info">{{$question->note}}</span></td>
+                    <th scope="row">Sur</th>
+                    <td><span class="badge badge-info">{{$question->note}} Points</span></td>
                 </tr>
                 <tr class="table-primary">
                     <th scope="row" width="20%">Options :</th>
@@ -100,17 +100,8 @@
                 <tr class="table-info">
                     <th scope="row" width="20%"> Ta réponse :</th>
                     <td width="80%">
-                        @if($question->choix1 === $reponse)
-                        <span class="badge badge-danger">A</span>
-                        @endif
-                        @if($question->choix2 === $reponse)
-                        <span class="badge badge-danger">B</span>
-                        @endif
-                        @if($question->choix3 === $reponse)
-                        <span class="badge badge-danger">C</span>
-                        @endif
-                        @if($question->choix4 === $reponse)
-                        <span class="badge badge-danger">D</span>
+                        @if(!empty($reponse))
+                          dd()
                         @endif
                     </td>
                 </tr id="bleu">

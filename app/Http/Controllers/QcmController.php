@@ -223,23 +223,24 @@ class QcmController extends Controller
                 $note = $note;
             }
         }
-
+        $reponse = [] ;
         if ($request->has('reponse1_'.$question->id)) {
-            $reponse = $question->choix1 ;
+            $reponse [] = $question->choix1 ;
        
-        }elseif ($request->has('reponse2_'.$question->id)) {
-            $reponse = $question->choix2 ;
-      
-        }elseif ($request->has('reponse3_'.$question->id)) {
-            $reponse = $question->choix3 ;
-           
-        }elseif ($request->has('reponse4_'.$question->id)) {
-            $reponse = $question->choix4 ;
-          
-        }else {
-            $reponse = "Aucune";
         }
-
+        if ($request->has('reponse2_'.$question->id)) {
+            $reponse [] = $question->choix2 ;
+      
+        }
+        if ($request->has('reponse3_'.$question->id)) {
+            $reponse [] = $question->choix3 ;
+           
+        }
+        if ($request->has('reponse4_'.$question->id)) {
+            $reponse [] = $question->choix4 ;
+          
+        }
+       
         return view('partie_etudiant.resultat', compact('note','etudiant','qcm','questions','reponse'));
     }
 }

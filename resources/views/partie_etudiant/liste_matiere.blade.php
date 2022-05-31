@@ -67,12 +67,6 @@
                             $nbr2 = count($matiere->niveaux) ;
                             $porcentage = $nbr1*100/$nbr2;
 
-                            echo '<div class="progress">';
-                                echo '<div class="progress-bar bg-info" role="progressbar"
-                                    style="width:'.$porcentage.'%" aria-valuenow="25" aria-valuemin="0"
-                                    aria-valuemax="100">'.number_format($porcentage, 2, '.', '').'%</div>';
-                                echo '</div>';
-
                             echo '<div class="blog-by">
                                 <p>'.$matiere->description.'</p>
                                 <p> <span class="text-success"> <i class="ion-android-person"></i> Enseignant</span>
