@@ -39,7 +39,6 @@
         <table class="stripe hover multiple-select-row data-table-export nowrap">
             <thead>
                 <tr>
-                    <th class="datatable-nosort">Photo</th>
                     <th>Nom</th>
                     <th>Prénom</th>
                     <th>Email</th>
@@ -52,17 +51,6 @@
                 @if(count($etudiants) > 0)
                 @foreach($etudiants as $etudiant)
                 <tr>
-                    <td>
-                        <div class="notification-list">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <img src="/storage/image/{{$etudiant->photo}}" alt="">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
                     <td class='table-plus'> {{ $etudiant->nom }} </td>
                     <td class='table-plus'> {{ $etudiant->prenom }} </td>
                     <td class='table-plus'> {{ $etudiant->email }} </td>

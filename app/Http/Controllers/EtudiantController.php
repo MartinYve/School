@@ -63,21 +63,13 @@ class EtudiantController extends Controller
             return back()->withErrors($validator)->withInput($request->all());
         }
         // Handle File Upload
-        if($request->hasFile('image')){
-            // Get filename with the extension
-            $filenameWithExt = $request->file('image')->getClientOriginalName();
-            // Get just filename
-            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            // Get just ext
-            $extension = $request->file('image')->getClientOriginalExtension();
-            // Filename to store
-            $fileNameToStore= $filename.'_'.time().'.'.$extension;
-            // Upload Image
-            $path = $request->file('image')->storeAs('public/image', $fileNameToStore);
+            $file = $request->file('file');
+            $fileName = $file->getClientOriginalName();
+            
+            $path = public_path('images');
+            $file->move($path , $fileName);
 
-        } else {
-            $fileNameToStore = 'avatar.jpg';
-        }
+      
 
         // Create Post
         $etudiant = new User;
@@ -85,7 +77,7 @@ class EtudiantController extends Controller
         $etudiant->prenom = $request->input('prenom');
         $etudiant->email = $request->input('email');
         $etudiant->password = Hash::make($request->input('password'));
-        $etudiant->photo = $fileNameToStore;
+        $etudiant->photo = $fileName;
         $etudiant->role = "3";
         $etudiant->classe_id = $request->input('classe');
         $etudiant->save();

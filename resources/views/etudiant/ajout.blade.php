@@ -104,7 +104,7 @@
                 <i class="icon-copy fa fa-image" aria-hidden="true"></i>&nbsp;Photo</label>
             <div class="col-sm-12 col-md-10 form-group">
                 <input class="form-control-file form-control height-auto @error('image') is-invalid @enderror" value=""
-                    name="image" type="file">
+                    name="file" type="file">
             </div>
             @error('image')
             <div class="form-control-feedback col-sm-12 col-md-10 has-danger" style="padding-left: 18%">{{ $message }}

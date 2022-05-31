@@ -52,9 +52,7 @@
         <div class="pull-left">
             <h4>QCM : <span class="text-blue">{{ $qcm->nom }}</span></h4>
 <p class="mb-30 font-14"> </p>
-<div id="display">
 
-</div>
 </div>
 </div>
 </div> 

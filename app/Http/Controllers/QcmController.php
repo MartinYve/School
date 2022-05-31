@@ -205,6 +205,8 @@ class QcmController extends Controller
         $etudiant = User::find($id_etudiant);
         // $resultat_qcm = Resultat_qcm::where('qcm_id', '=', $id_qcm)->where('etudiant_id', '=', $id_etudiant)->get();
         $questions = Question::where('qcm_id' , $request->qcm_id)->get();
+        $ques = Question::select('choix1' , 'choix2' , 'choix3' , 'choix4')->where('qcm_id' , $request->qcm_id)->first()->toArray();
+
         foreach ($questions as $key => $question) {
             
             if ($question->reponse1 == "vrai" && $request->has('reponse1_'.$question->id)) {
@@ -241,6 +243,6 @@ class QcmController extends Controller
           
         }
        
-        return view('partie_etudiant.resultat', compact('note','etudiant','qcm','questions','reponse'));
+        return view('partie_etudiant.resultat', compact('note','etudiant','qcm','questions','reponse','ques'));
     }
 }

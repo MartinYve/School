@@ -124,7 +124,7 @@
                 <label class="custom-control-label" for="reponse4">Choix Correct?!!</label>
             </div>
         </div>
-        <button type="submit" class="btn btn-warning" name="action" value="question" style="margin-left:70%;"
+        <button class="btn btn-warning" name="action" value="question" style="margin-left:70%;"
         data-toggle="tooltip" title="Si c'est la derniére question appuyer sur ajouter question avant puis sur finir">
             <i class="icon-copy fa fa-mail-forward"aria-hidden="true"></i>
             &nbsp;Ajouter Question

@@ -101,7 +101,20 @@
                     <th scope="row" width="20%"> Ta réponse :</th>
                     <td width="80%">
                         @if(!empty($reponse))
-                          dd()
+                            @foreach($reponse as $id => $value)
+                                
+                                @foreach($ques as $id2 => $val)
+                                    @if($id = $id2)
+                                        @if($value === $val && $id = "1" && $id2 = "1")
+                                                @if($id = "1" && $id2 = "1")
+                                                <span class="badge badge-danger">{{$value}}</span>
+                                                @endif
+                                        @endif
+                                    @endif
+                                @endforeach
+                            @endforeach
+                        @else
+                        <span class="badge badge-danger">Aucune réponses choisi</span>
                         @endif
                     </td>
                 </tr id="bleu">
